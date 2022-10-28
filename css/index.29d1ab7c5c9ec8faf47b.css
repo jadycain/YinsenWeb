@@ -61,7 +61,7 @@ p {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.2;
+  opacity: 0.05;
   z-index: -1;
 }
 
@@ -81,7 +81,6 @@ ul {
 }
 
 .l-body {
-  border: 1px solid rgb(225, 255, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +95,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 5vh;
 }
 .l-header h1 {
   text-align: center;
@@ -173,17 +173,16 @@ ul {
 }
 
 .m-space__title {
-  border-bottom: 5px solid #ffc730;
   font-size: 25px;
   padding-top: 5vh;
-  padding-bottom: 10px;
+  padding-bottom: 2vh;
 }
 .m-space__plan {
   border-top: 1px solid #929292;
   border-bottom: 1px solid #929292;
   display: flex;
   padding: 20px 0;
-  margin: 5vh 0;
+  margin: 0 0 5vh 0;
 }
 .m-space__plan-container {
   display: flex;
