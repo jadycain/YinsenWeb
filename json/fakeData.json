@@ -1,0 +1,35 @@
+{
+    "spaceData": [
+        {
+            "index": 0,
+            "name": "流浪動物收容所",
+            "max": "2-4",
+            "time": [ 9, 10, 13, 14],
+            "price": 100,
+            "src": "img/room_1.png",
+            "icon": "img/space_1.png"
+            
+        },
+        {
+            "index": 1,
+            "name": "大野狼的肚肚",
+            "max": "4-10",
+            "time": [ 9, 10, 11, 12, 13, 14, 15, 16],
+            "price": 100,
+            "src": "img/room_2.png",
+            "icon": "img/space_2.png"
+            
+        },
+        {
+            "index": 2,
+            "name": "圓桌武士的殿堂",
+            "max": "8-12",
+            "time": [ 9, 10, 11, 12, 13, 14, 15, 16, 19, 20],
+            "price": 100,
+            "src": "img/room_3.png",
+            "icon": "img/space_3.png"
+            
+        }
+                               
+    ]
+}
