@@ -13,18 +13,18 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
     <link rel="stylesheet" href="https://unpkg.com/@vuepic/vue-datepicker@latest/dist/main.css">
-    
 
-<script defer src="./js/index.f9e1164e67ea759ea8fe.js"></script><link href="./css/index.f9e1164e67ea759ea8fe.css" rel="stylesheet"></head>
+
+<script defer src="./js/index.1f1f00ba963fada123eb.js"></script><link href="./css/index.1f1f00ba963fada123eb.css" rel="stylesheet"></head>
 <body>
     <div id="app">
         <div id="wrapper">
             <div class="l-body">
-                <div  class="l-container">
+                <div class="l-container">
                     <header class="l-header">
                         <h1>我要預約</h1>
-                     </header>
-                     
+                    </header>
+
                     <div class="m-search">
                         <div class="m-search__box">
                             <div class="m-search__box-filter">
@@ -33,7 +33,7 @@
                                     <Calendar @update-date="getDateValFromChild"></Calendar>
                                     <!-- @date-update="getDateValFromChild" -->
                                     <!-- <my-component></my-component> -->
-                                    
+
                                 </div>
                                 <div class="m-search__box-filter_item">
                                     <label for="">預約人數</label>
@@ -78,33 +78,34 @@
                                         
                                     </div> -->
                                     <input type="radio" id="box" name="type" value="包廂" v-model="type">
-                                        <label for="box">玩桌遊(包廂)</label>
+                                    <label for="box">玩桌遊(包廂)</label>
                                     <!-- <div class="m-search__box-type_items__item">
                                         
                                     </div> -->
                                     <input type="radio" id="rent" name="type" value="空間" v-model="type">
-                                        <label for="rent">租借空間</label>
+                                    <label for="rent">租借空間</label>
                                     <!-- <div class="m-search__box-type_items__item">
                                         
                                     </div> -->
-                                    
-                                    
+
+
                                 </div>
-                                <button class="m-search__search" :disabled="!searchIsValid" :class="isValid" @click="handleSearchSpace">
+                                <button class="m-search__search" :disabled="!searchIsValid" :class="isValid"
+                                    @click="handleSearchSpace">
                                     搜尋空間
                                 </button>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- v-if="!isSearching" -->
-                    <div class="m-spaceInfo" v-if="!isSearching"> 
+                    <div class="m-spaceInfo" v-if="!isSearching">
                         <div class="m-spaceInfo__title">
                             空間介紹
                         </div>
                         <div class="m-spaceInfo__wrapper">
                             <div class="m-spaceInfo__wrapper-container">
-                                
+
                                 <div class="m-spaceInfo__wrapper-container_img">
                                     <img src="img/room_1.png" alt="">
                                 </div>
@@ -114,13 +115,13 @@
                                     </div>
                                     <div class="m-spaceInfo__wrapper-container_info__max">
                                         <img src="img/icon_user.png" alt="">
-                                        <div> 2-4 </div> 
+                                        <div> 2-4 </div>
                                     </div>
                                 </div>
-                                
-                            </div>  
+
+                            </div>
                             <div class="m-spaceInfo__wrapper-container">
-                                
+
                                 <div class="m-spaceInfo__wrapper-container_img">
                                     <img src="img/room_2.png" alt="">
                                 </div>
@@ -130,13 +131,13 @@
                                     </div>
                                     <div class="m-spaceInfo__wrapper-container_info__max">
                                         <img src="img/icon_user.png" alt="">
-                                        <div> 4-10 </div> 
+                                        <div> 4-10 </div>
                                     </div>
                                 </div>
-                                
-                            </div>  
+
+                            </div>
                             <div class="m-spaceInfo__wrapper-container">
-                                
+
                                 <div class="m-spaceInfo__wrapper-container_img">
                                     <img src="img/room_3.png" alt="">
                                 </div>
@@ -146,29 +147,29 @@
                                     </div>
                                     <div class="m-spaceInfo__wrapper-container_info__max">
                                         <img src="img/icon_user.png" alt="">
-                                        <div> 8-12 </div> 
+                                        <div> 8-12 </div>
                                     </div>
                                 </div>
-                                
-                            </div> 
+
+                            </div>
                         </div>
                     </div>
-    
-                    
-    
+
+
+
                     <loading :is-full-page="false"></loading>
                     <div class="m-space" v-if="filterSpaceData.length > 0">
                         <div class="m-space__title">
                             可預約的空間
                         </div>
                         <div class="m-space__plan" v-for="(item, index) in filterSpaceData" :key="item.index">
-                            
-                            <div class="m-space__plan-container" >
-                                
-                                <div  class="m-space__plan-container_img">
+
+                            <div class="m-space__plan-container">
+
+                                <div class="m-space__plan-container_img">
                                     <img :src=imgType(item.SpaceName) alt="">
                                 </div>
-                                <div  class="m-space__plan-container_info">
+                                <div class="m-space__plan-container_info">
                                     <div class="m-space__plan-container_info__name">
                                         <h3>{{item.SpaceName}}</h3>
                                     </div>
@@ -177,19 +178,21 @@
                                             <img src="img/icon_user.png" alt="">
                                             <div>容納人數</div>
                                         </div>
-                                        <div class="m-space__plan-container_info__max-num"> {{item.MinCapacity}}-{{item.MaxCapacity}} 人</div> 
+                                        <div class="m-space__plan-container_info__max-num">
+                                            {{item.MinCapacity}}-{{item.MaxCapacity}} 人</div>
                                     </div>
                                     <div class="m-space__plan-container_info__time">
-                                        
+
                                         <div class="m-space__plan-container_info__time-icon">
                                             <img src="img/icon_time.png" alt="">
                                             <span>開始時間</span>
                                         </div>
 
                                         <div class="m-space__plan-container_info__time-timeList">
-                                            <select  @change="handleSelectStartTime($event, item.SpaceName)" >
-                                                <option disabled value="">請選擇開始時間</option>
-                                                <option v-for="data in item.AvailableTime" :value="data">{{data}} : 00</option>
+                                            <select @change="handleSelectStartTime($event, item.SpaceName)">
+                                                <option disabled value="" :selected>請選擇開始時間</option>
+                                                <option v-for="data in item.AvailableTime" :value="data">{{data}} : 00
+                                                </option>
                                             </select>
                                             <!-- <div  v-for="data in item.AvailableTime" >
                                                 <input type="radio" :id="data+item.SpaceName+item.Remark" :name="data" :value="data" @change="(e) => selectStartTime(data, item.SpaceName,item.Remark )" >
@@ -197,19 +200,21 @@
                                             </div> -->
                                         </div>
 
-                                        
 
-                                        
+
+
                                     </div>
 
                                     <div class="m-space__plan-container_info__time">
-                                        <div v-if="selectSpaceName === item.SpaceName" class="m-space__plan-container_info__time-icon">
+                                        <div v-if="selectSpaceName === item.SpaceName"
+                                            class="m-space__plan-container_info__time-icon">
                                             <img src="img/icon_time.png" alt="">
                                             <span>結束時間</span>
                                         </div>
-    
-                                        <div v-if="selectSpaceName === item.SpaceName" class="m-space__plan-container_info__time-timeList">
-                                            <select  @change="handleSelectEndTime($event)" v-model="endTime">
+
+                                        <div v-if="selectSpaceName === item.SpaceName"
+                                            class="m-space__plan-container_info__time-timeList">
+                                            <select @change="handleSelectEndTime($event)" v-model="endTime">
                                                 <option disabled value="">請選擇結束時間</option>
                                                 <option v-for="data in endTimeData" :value="data">{{data}} : 00</option>
                                             </select>
@@ -220,34 +225,39 @@
                                         </div>
                                     </div>
 
-                                   
 
-                                    
-                                    
-                                    <div class="m-space__plan-container_info__detail" v-if="selectSpaceName === item.SpaceName && discount">
-                                       <div class="m-space__plan-container_info__detail-icon">
-                                        <font-awesome-icon icon="fa-solid fa-gift" /> 
-                                       </div>
-                                       <span>{{discount}}</span>
+
+
+
+                                    <div class="m-space__plan-container_info__detail"
+                                        v-if="selectSpaceName === item.SpaceName && discount">
+                                        <div class="m-space__plan-container_info__detail-icon">
+                                            <font-awesome-icon icon="fa-solid fa-gift" />
+                                        </div>
+                                        <span>{{discount}}</span>
                                     </div>
                                 </div>
-                                
+
                             </div>
-                            
+
                             <div class="m-space__plan-reservation">
                                 <img :src=iconType(item.SpaceName) alt="">
                                 <div class="m-space__plan-reservation_price">
                                     <span>$</span>
-                                    <span>{{selectSpaceName === item.SpaceName ? price : 0}}</span>
+                                    <span>{{selectSpaceName === item.SpaceName ? price : 0}} </span>
+                                    <span>
+                                        /{{type === '人頭' ? '人' :
+                                        '間'}}
+                                    </span>
                                 </div>
-                                <div class="m-space__plan-reservation_btn">
+                                <div class="m-space__plan-reservation_btn" @click=handleCheckPrice(item.SpaceId)>
                                     預約
                                 </div>
                             </div>
                         </div>
 
-                       
-    
+
+
                         <!-- <div class="m-space__plan">
                             
                             <div class="m-space__plan-container">
@@ -345,7 +355,82 @@
                     </div> -->
                 </div>
             </div>
-        </div>
+            <div class="m-priceModal" v-if="priceModalIsOpen">
+                <div class="m-priceModal__wrapper">
+                    <div class="m-priceModal__wrapper-container">
+                        <h3 class="m-priceModal__wrapper-container_title">
+                            預約內容
+                        </h3>
+                        <div class="m-priceModal__wrapper-container_itemsContainer">
+                            <div class="m-priceModal__wrapper-container_itemsContainer__item">
+                                <div>預約日期：</div>
+                                <div>{{date}}</div>
+                            </div>
+                            <div class="m-priceModal__wrapper-container_itemsContainer__item">
+                                <div>預約時間：</div>
+                                <div>{{startTime}}：00 - {{endTime}}：00</div>
+                            </div>
+                            <div class="m-priceModal__wrapper-container_itemsContainer__item">
+                                <div>預約人數：</div>
+                                <div>{{people}}</div>
+                            </div>
+                            <div class="m-priceModal__wrapper-container_itemsContainer__item">
+                                <div>預約類型：</div>
+                                <div>{{type}}</div>
+                            </div>
+                            <div class="m-priceModal__wrapper-container_itemsContainer__item">
+                                <div>預約空間：</div>
+                                <div>{{selectSpaceName}}</div>
+                            </div>
+                            <div class="m-priceModal__wrapper-container_itemsContainer__item"
+                                v-if="priceCheckData[0].Remark">
+                                <div><font-awesome-icon icon="fa-solid fa-gift" /></div>
+                                <div>{{priceCheckData[0].Remark}}</div>
+                            </div>
+                        </div>
+                        <div class="m-priceModal__wrapper-container_priceContainer">
+                            <div class="m-priceModal__wrapper-container_priceContainer__title">金額</div>
+                            <div class="m-priceModal__wrapper-container_priceContainer__price">
+                                {{priceCheckData[0].TotalPrice}}
+                            </div>
+                        </div>
+                        <h3 class="m-priceModal__wrapper-container_title">
+                            聯絡資訊
+                        </h3>
+                        <div class="m-priceModal__wrapper-container_formContainer">
+                            <div class="m-priceModal__wrapper-container_formContainer__item">
+                                <label for="">預約姓名</label>
+                                <input type="text" v-model="customName">
+                            </div>
+                            <div class="m-priceModal__wrapper-container_formContainer__item">
+                                <label for="">聯絡電話</label>
+                                <input type="text" v-model="customPhone">
+                            </div>
+                            <div class="m-priceModal__wrapper-container_formContainer__item">
+                                <label for="">性別</label>
+                                <select v-model="customGender">
+                                    <option disabled value="">請選擇性別</option>
+                                    <option value="M">男生</option>
+                                    <option value="F">女生</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="m-priceModal__wrapper-container_BtnWrapper">
+                            <div class="m-priceModal__wrapper-container_BtnWrapper__cancleBtn"
+                                @click="handleReservation">
+                                取消預約
+                            </div>
+                            <div class="m-priceModal__wrapper-container_BtnWrapper__confirmBtn"
+                                @click="handleReservation">
+                                確認預約
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div> <!--Wrapper End-->
     </div>
 </body>
 
